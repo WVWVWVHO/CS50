@@ -1,0 +1,4 @@
+0. 3x3 up to 9x9
+1. an array
+2. greet
+3. clear, init, draw, move, won
