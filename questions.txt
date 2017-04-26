@@ -1,0 +1,15 @@
+1.  <stdint.h> declares types of integers with specific width requirements
+2.  it tells the computer how many bits are 'grouped together' to make one value
+3.  BYTE:   8 bits
+    DWORD:  32 bits 
+    LONG:   32 bits
+    WORD:   16 bits
+4.  in hexadecimal:0x42 0x4D
+5.  bfSize is the size of the whole file, while biSize is only the size of the header
+6.  the image is made-up from the top left corner to the bottom right corner
+7.  color table
+8.  multiple reasons, the file does not exist, the file is not writable, etc.
+9.  because it only needs to read it once
+10. 0
+11. it offsets the location of the file pointer
+12. it changes the location of the pointer from its current location
