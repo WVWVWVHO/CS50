@@ -1,0 +1,34 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is another word for sillicosis, which is a form of a long disease.
+
+
+
+1.  Getrusage returns the resource usage measures
+
+
+
+2.  There are 16 members in a struct rusage
+
+
+
+3.  Because that could create rounding errors
+
+
+
+4.  It checks for every letter (as long as it's not the end of the file) if its a alphanumerical character or apostroph. 
+    Than it adds the letter to the word and checks if the word is not longer than the maximum allowed length. (if that's 
+    the case it throws the word out and skips the rest of the still to read word. 
+    If it finds a number, it throws all the letters after the number out and if there are character before the number it keeps that as a word.
+    
+    If it finds another character and it already scanned one or more letters it will see it as a word and will update the word count with 1.
+    
+    Than it checks if it's wrongly spelled (while keeping track of the time), if so it prints it out 
+    and finally it prepares for a new word by setting the letter counter to 0.
+
+
+
+5.  Fscanf scans whole words, including numbers and other characters that are non-important for this exercise.
+
+
+
+6.  By putting consts for a variable, you can indicate that the variable does not change. The compiler will than 
+    require that the variable does not change, otherwise it won't compile succesfully.
