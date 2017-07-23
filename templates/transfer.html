@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transfer
+{% endblock %}
+
+{% block main %}
+<br><br>
+<table cellspacing="0" cellpadding="0" style="width:60%" align="center">
+    <tr>
+        <td><center>
+            <form action="{{ url_for('transfer') }}" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="insert" placeholder="amount" type="text"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default" type="submit">Insert</button>
+                </div>
+            </form>
+        </center></td>
+        <td><center>
+            <form action="{{ url_for('transfer') }}" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="withdraw" placeholder="amount" type="text"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default" type="submit">Withdraw</button>
+                </div>
+            </form>
+        </td>
+    </center></tr>
+</table>
+{% endblock %}

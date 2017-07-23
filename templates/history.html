@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <br><br><br><br>
+    <table align="center"s style="width:45%" padding=6>
+        <tr>
+            <th>Symbol</th>
+            <th>Bought/Sold</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Value</th>
+            <th>Time</th>
+        </tr>
+        {% for stock in range(lentransactions) -%}
+        <tr>
+            <td> {{ trans_dict[stock]['symbol'] }}</td>
+            <td> {{ b_s[stock] }}</td>
+            <td> {{ trans_dict[stock]['number']|abs }}</td>
+            <td>${{ trans_dict[stock]['price']|round(2) }}</td>
+            <td>${{ (trans_dict[stock]['number'] * trans_dict[stock]['price'])|round(2)|abs }}</td>
+            <td> {{ trans_dict[stock]['datetime'] }}</td>
+        </tr>
+        {%- endfor %}
+    </table> 
+    <br><br><br><br><br><br><br>
+{% endblock %}
