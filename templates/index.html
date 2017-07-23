@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <META HTTP-EQUIV="refresh" CONTENT="2">
+    <br><br><br><br>
+    
+    <table align="center"s style="width:42%" padding=6>
+        <tr>
+            <th>Symbol</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total value</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for stock in range(lenportfolio) -%}
+        <tr>
+            <td>{{ port_dict[stock]['symbol'] }}</td>
+            <td>{{ port_dict[stock]['number'] }}</td>
+            <td>${{ lookups[stock]|round(2) }}</td>
+            <td>${{ (lookups[stock]*port_dict[stock]['number'])|round(2) }}</td>
+            <td>
+                <form action="{{ url_for('sell') }}" method="post">
+                    <button class="btn btn-default" type="submit">Sell</button>
+                    <input type="hidden" name="symbol_to_sell" type="text" value={{ port_dict[stock]['symbol'] }} />
+                </form>
+            </td>
+            <td>
+                <form action="{{ url_for('buy') }}" method="post">
+                    <button class="btn btn-default" type="submit">Buy</button>
+                    <input type="hidden" name="symbol_to_buy" type="text" value={{ port_dict[stock]['symbol'] }} />
+                </form>
+            </td>
+        </tr>
+        {%- endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td><b>Cash</b></td>
+            <td><b>${{ cash|round(2) }}</b></td>
+            <td colspan="2">
+                <center>
+                <form action="{{ url_for('transfer') }}" method="get">
+                    <button class="btn btn-default" type="submit">  Transfer money </button>
+                </form>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><b>Total</b></td>
+            <td><b>${{ (total_value + cash)|round(2) }}</b></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> 
+
+
+{% endblock %}
