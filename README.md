@@ -5,6 +5,8 @@
 
 Every project is a new branch (that's how CS50 automatically saves all of their student's projects):
 
+&nbsp;
+
 <strong>x/speller</strong> is a program, written in C, that imports a library and document and spellchecks all the words in the document.
 <img src="./img1.png"/>
 
