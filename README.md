@@ -1,7 +1,7 @@
 <h2>Final projects for CS50</h2>
 
 
-<h3>This repository contains my final 4 projects of the CS50 course.</h3>
+<h4>This repository contains my final 4 projects of the CS50 course.</h4>
 
 Every project is a new branch (that's how CS50 automatically saves all of their student's projects):
 
@@ -20,7 +20,7 @@ Every project is a new branch (that's how CS50 automatically saves all of their 
 
 &nbsp;
 
-<strong>x/pset7</strong> is a stock-trading website in which the user can make an account, and 'buy' and 'sell' all kinds of stocks, based on their current price.
+<strong>x/pset7</strong> is a stock-trading website in which the user can make an account to 'buy' and 'sell' all kinds of stocks, based on their current price. The website includes a log-in page, index, buy/sell page and a transaction history page.
 <img src="./img4.png"/>
 <img src="./img5.png"/>
 <img src="./img6.png"/>
