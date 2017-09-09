@@ -1,7 +1,7 @@
-<h3>Final projects for CS50</h3>
+<h2>Final projects for CS50</h2>
 
 
-<h4>This repository contains my final 4 projects of the CS50 course.</h4>
+<h3>This repository contains my final 4 projects of the CS50 course.</h3>
 
 Every project is a new branch (that's how CS50 automatically saves all of their student's projects):
 
